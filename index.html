@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 <!-- Enes -->
-    <title>Musa Celikak | Smart Business Card</title>
+    <title>Oguzhan Akmantemiz | Smart Business Card</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -595,9 +595,9 @@
                 aria-label="Erreichbarkeitsstatus anzeigen"
             > <!-- Enes -->
                 <img
-                    src="./MusaZoomed.png"
+                    src="./Oguzhan Zoomed.png"
                     
-                    alt="Profilbild Musa Celikak"   
+                    alt="Profilbild Oguzhan Akmantemiz"   
                     class="h-20 w-20 rounded-full object-cover"
                 >
 
@@ -644,15 +644,15 @@
                     class="mb-2 text-xs font-semibold uppercase
                            tracking-[0.24em] text-white/45"
                 >
-                    Automobil-Verkäufer & Berater
+                    Verkaufsberater
                 </p>
 
                 <h1
                     class="text-[43px] font-semibold leading-[0.95]
                            tracking-[-0.055em] sm:text-5xl"
                 ><!-- Enes -->
-                    Musa<br>
-                    Celikak<span class="text-white/30"></span>
+                    Oguzhan<br>
+                    Akmantemiz<span class="text-white/30"></span>
                 </h1>
 
                 <p class="mt-5 max-w-xs text-sm leading-6 text-white/55">
@@ -677,7 +677,7 @@
                 <div class="mt-7 grid grid-cols-2 gap-2.5">
 
                     <a
-                        href="tel:+4915751109083"
+                        href="tel:+492151540843"
                         class="flex min-h-14 items-center justify-between
                                rounded-full bg-white px-5 text-sm font-bold
                                text-black transition hover:-translate-y-0.5"
@@ -713,7 +713,7 @@
 
                 <!-- WhatsApp  Enes -->
                 <a
-                    href="https://wa.me/4915751109083"
+                    href="https://wa.me/4915737634027"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex min-h-[72px] items-center justify-between
@@ -967,8 +967,8 @@ walletCover.addEventListener("pointermove", function (event) {
         const weekday = now.getDay();
         const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-        const startTime = 9 * 60;  // 08:00 Uhr
-        const endTime = 18 * 60;   // 17:00 Uhr
+        const startTime = 9 * 60;  // 09:00 Uhr
+        const endTime = 18 * 60;   // 18:00 Uhr
 
         const startTimeSaturday = 9 * 60;  // 09:00 Uhr
         const endTimeSaturday = 14 * 60;   // 14:00 Uhr
@@ -1054,7 +1054,7 @@ function showAvailabilityBubble(isAvailable) {
         "<br>"+
         "Meine Arbeitszeiten:<br>"+
         "Mo. - Fr.<br>"+   
-        "08:00 bis 17:00 Uhr<br>"+
+        "09:00 bis 18:00 Uhr<br>"+
         "Sa. <br>"+
         "09:00 bis 14:00 Uhr.";
     } else {
@@ -1063,7 +1063,7 @@ function showAvailabilityBubble(isAvailable) {
         "<br>"+
         "Meine Arbeitszeiten:<br>"+
         "Mo. - Fr.<br>"+   
-        "08:00 bis 17:00 Uhr<br>"+
+        "09:00 bis 18:00 Uhr<br>"+
         "Sa. <br>"+
         "09:00 bis 14:00 Uhr.";
     }
@@ -1101,12 +1101,12 @@ profileTrigger.addEventListener("keydown", function (event) {
             const vCard = [
                 "BEGIN:VCARD",
                 "VERSION:3.0",
-                "N:Celikak;;;",
-                "FN:Musa",
+                "N:Akmantemiz;;;",
+                "FN:Oguzhan",
                 "ORG:Auto Osmann GmbH",
-                "TITLE:Automobil-Verkäufer & Berater",
-                "TEL;TYPE=CELL:+4915751109083",
-                "EMAIL:musa.celikak@osmann-automobile.de",
+                "TITLE:Verkaufsberater",
+                "TEL;TYPE=CELL:+4915737634027",
+                "EMAIL:oguzhan.akmantemiz@osmann-automobile.de",
                 "URL:https://musa-celikak-vcard.netlify.app/",
                 "ADR;TYPE=WORK:;;Dießemer Bruch 106;Krefeld;;47805;Deutschland",
                 "END:VCARD"
@@ -1121,7 +1121,7 @@ profileTrigger.addEventListener("keydown", function (event) {
             const downloadLink = document.createElement("a");
 
             downloadLink.href = downloadUrl;
-            downloadLink.download = "Musa-Celikak.vcf";
+            downloadLink.download = "Oguzhan-Akmantemiz.vcf";
             downloadLink.click();
 
             URL.revokeObjectURL(downloadUrl);
