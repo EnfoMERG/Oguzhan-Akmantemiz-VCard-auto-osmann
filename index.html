@@ -576,7 +576,8 @@
      class="card-animation relative isolate rounded-[32px]
            border border-white/30 bg-black/50 p-4
            backdrop-blur-md
-           shadow-[0_0_30px_rgba(255,255,255,.35)]"
+           shadow-none
+           transition-shadow duration-[2000ms] ease-in-out"
 >
 
  <div id="headlightBeam" aria-hidden="true"></div>
@@ -644,7 +645,7 @@
                     class="mb-2 text-xs font-semibold uppercase
                            tracking-[0.24em] text-white/45"
                 >
-                    Verkaufsberater
+                    Automobil-Verkäufer & Berater
                 </p>
 
                 <h1
@@ -690,7 +691,7 @@
                     </a>
 <!-- Enes -->
                     <a
-                        href="mailto:musa.celikak@osmann-automobile.de"
+                        href="mailto:oguzhan.akmantemiz@osmann-automobile.de"
                         class="flex min-h-14 items-center justify-between
                                rounded-full border border-white/15
                                bg-white/5 px-5 text-sm font-bold transition
@@ -937,6 +938,10 @@ walletCover.addEventListener("pointermove", function (event) {
     }, 1000);
     }, 250);
 
+    //background glow delayed begin
+    setWalletOpened(true);
+
+
     setTimeout(function () {
         walletBackground.classList.add("finished");
         walletCover.classList.add("finished");
@@ -1005,6 +1010,32 @@ const availabilityBubbleText = document.getElementById(
 );
 
 let bubbleTimeout;
+
+//  Background Glow delayed begin
+const profil = document.getElementById("profil");
+
+let shadowTimeout;
+
+function setWalletOpened(value) {
+    isOpened = value;
+
+    walletCover.classList.toggle("opened", isOpened);
+
+    clearTimeout(shadowTimeout);
+
+    if (isOpened) {
+        shadowTimeout = setTimeout(() => {
+            profil.classList.add(
+                "shadow-[0_0_30px_rgba(255,255,255,.35)]"
+            );
+        }, 700);
+    } else {
+        profil.classList.remove(
+            "shadow-[0_0_30px_rgba(255,255,255,.35)]"
+        );
+    }
+}
+// background glow delayed end
 
 function positionHeadlightBeam() {
     const profileSection = document.getElementById("profil");
@@ -1104,10 +1135,10 @@ profileTrigger.addEventListener("keydown", function (event) {
                 "N:Akmantemiz;;;",
                 "FN:Oguzhan",
                 "ORG:Auto Osmann GmbH",
-                "TITLE:Verkaufsberater",
+                "TITLE:Automobil-Verkäufer & Berater",
                 "TEL;TYPE=CELL:+4915737634027",
                 "EMAIL:oguzhan.akmantemiz@osmann-automobile.de",
-                "URL:https://musa-celikak-vcard.netlify.app/",
+                "URL:https://https://oguzhan-akmantemiz-vcard-auto-osmann.pages.dev/",
                 "ADR;TYPE=WORK:;;Dießemer Bruch 106;Krefeld;;47805;Deutschland",
                 "END:VCARD"
             ].join("\n");
